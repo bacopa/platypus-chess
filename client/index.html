@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="chessApp">
+<head>
+	<title>Platypus Chess</title>
+	
+    <script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="./bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="./bower_components/angular-route/angular-route.min.js"></script>
+
+	<link rel="icon" href="/img/pink-knight-2.png">
+
+    <!-- chess libraries -->
+	<script type="text/javascript" src="chessboardjs-0.3.0/js/chessboard-0.3.0.js"></script>
+	<link rel="stylesheet" type="text/css" href="chessboardjs-0.3.0/css/chessboard-0.3.0.css">
+
+
+	<!-- get notation chessObject.js -->
+	<script type="text/javascript" src="validateMove/chessObject.js"></script>
+
+	<!-- legalMove.js -->
+	<script type="text/javascript" src="validateMove/legalMove.js"></script>
+	
+	<!-- queenCheckmate.js, queenAI.js -->
+	<script type="text/javascript" src="validateMove/queenCheckmate.js"></script>
+	<script type="text/javascript" src="validateMove/queenAI.js"></script>
+
+	<!-- sacCity.js -->
+	<script type="text/javascript" src="validateMove/sacCity.js"></script>
+
+	<!-- app.js -->
+	<script src="./angular/app.js"></script>
+
+	<!-- controllers -->
+	<script src="./angular/controllers/puzzlesController.js"></script>
+	<script src="./angular/controllers/forksController.js"></script>
+	<script src="./angular/controllers/skewersController.js"></script>
+	<script src="./angular/controllers/pinsController.js"></script>
+	<script src="./angular/controllers/discoveriesController.js"></script>
+	<script src="./angular/controllers/practiceController.js"></script>
+	<script src="./angular/controllers/endgameSimController.js"></script>
+	<script src="./angular/controllers/queenAIController.js"></script>
+	<script src="./angular/controllers/sacCityController.js"></script>
+
+	<!-- Puzzle Factory -->
+	<script src="./angular/puzzleFactory.js"></script>
+	
+</head>
+<body ng-app="chessApp">
+
+
+<div>
+
+	<a href="#/new">Create Puzzle</a> | <a href="#/forks">forks</a> | <a href="#/pins">pins</a> | <a href="#/skewers">skewers</a> | <a href="#/discovered">discovered attack</a> | <a href="#/endgames">endgame simulation</a> | <a href="#/practice">practice</a> | <a href="#/queenAI">queenAI</a> | <a href="#/sacCity"> Sac City</a><br>
+	<br><div ng-view=""></div>
+
+</div>
+
+</body>
+
+
+
+</html>
+
